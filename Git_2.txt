@@ -1,0 +1,72 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+ Создаем удаленный репозиторий на GitHab ("Git") и клонируем его на локальный компьютер: git clone https://github.com/Artemm13/Git.git 
+ Создаем ветки в репозитории "Git": git branch Postman && git branch Jmeter && git branch CheckLists && git branch Bag_Reports && git branch SQL && git branch Charles && git branch Mobile_Testing
+ Используем команду git branch чтобы убедиться, что все необходимые ветки созданы. 
+
+2. Запушить все ветки на внешний репозиторий
+ git push -u origin Postman
+ git push -u origin Jmeter
+ git push -u origin CheckLists
+ git push -u origin Bag_Reports
+ git push -u origin SQL
+ git push -u origin Charles
+ git push -u origin Mobile_Testing
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+ git checkout Bag_Reports (переходим в ветку BagReports)
+ touch bag_report.txt (создаем txt файл)
+ vim bag_report.txt (пишем структуру баг репорта): 
+1. Id
+2. Summary
+3. Steps
+4. Expected result
+5. Actual result
+6. Severity
+7. Priority
+8. Type
+9. Assigned
+10. State
+11. Date of creation
+12. Environment
+13. Attachment
+
+4. Запушить структуру багрепорта на внешний репозиторий
+ git add bag_report.txt
+ git commit -m "Add bug report structure"
+ git push origin Bag_Reports
+ 
+5. Вмержить ветку Bag Reports в Main
+ git checkout main
+ git merge Bag_Reports
+ 
+6. Запушить main на внешний репозиторий.
+ git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+ git checkout CheckLists (переходим в ветку СheckLists)
+ touch checklist.txt (создаем txt файл)
+ vim checklist.txt (пишем чеклиста):
+1. ID
+2. Description (Expected result)
+3. Result (Pass/Fail)
+4. Comment
+
+8. Запушить структуру на внешний репозиторий
+ git add checklist.txt
+ git commit -m "Add checklist structure"
+ git push origin СheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+ Делаем в GitHub.
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+ git checkout main
+ git pull
