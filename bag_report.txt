@@ -1,0 +1,13 @@
+1. Id
+2. Summary
+3. Steps
+4. Expected result
+5. Actual result
+6. Severity
+7. Priority
+8. Type
+9. Assigned
+10. State
+11. Date of creation
+12. Environment
+13. Attachment
